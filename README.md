@@ -21,6 +21,24 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Installation
+
+Install laravel-ratih-berkah-jaya
+
+```bash
+  cd laravel-ratih-berkah-jaya
+  composer install
+```
+for install node_modules
+```bash
+  npm install
+```
+open 2 terminal and run bash 
+```bash
+-  php artisan serv
+-  npm run dev
+```
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
