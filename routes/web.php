@@ -14,48 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Example Routes
-// Route::view('/', 'landing');
-
-// // Auth::routes();
-
-
-// // Route::middleware('auth', 'user-role:user')->group(function(){
-// //         Route::get('/dashboard','dashboard');
-// // });
-// // Route::view('/dashboard', 'dashboard');
-// // Route::prefix('dashboard')
-// //     ->middleware('auth:sactum', 'admin')
-// //     ->group(function(){
-// //         Route::get('/', 'dasboard');
-
-// //     });
-// Route::view('/pages/slick', 'pages.slick');
-// Route::view('/master/karyawan', 'pages.master.karyawan');
-// Route::view('/master/jabatan', 'pages.master.jabatan');
-// Route::view('/master/data_kpi', 'pages.master.kpi');
-// Route::view('/master/unit_kerja', 'pages.master.unit');
-// Route::view('/pages/blank', 'pages.blank');
-
-
-// Route::view('/create/karyawan', 'pages.master.create.karyawan');
-// Route::view('/create/jabatan', 'pages.master.create.jabatan');
-// Route::view('/create/data_kpi', 'pages.master.create.kpi');
-// Route::view('/create/unit_kerja', 'pages.master.create.unit');
-
-
-// Route::view('/transaksi/karyawan', 'pages.transaksi.karyawan');
-// Route::view('/transaksi/jabatan', 'pages.transaksi.jabatan');
-// Route::view('/transaksi/data_kpi', 'pages.transaksi.kpi');
-
-// Route::view('/transaksi_create/data_kpi', 'pages.transaksi.create.kpi');
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {   
-    /**
-     * Home Routes
-     */
-    // Route::get('/', 'HomeController@index')->name('home.index');
+    
     Route::view('/', 'landing');
     Route::group(['middleware' => ['guest']], function() {
         /**
@@ -67,7 +29,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         /**
          * Login Routes
          */
-        // Route::get('/login', 'LoginController@show')->name('login');
         Route::get('/login', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
 
